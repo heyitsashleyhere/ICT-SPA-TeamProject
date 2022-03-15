@@ -1,0 +1,206 @@
+@media screen and (min-width:1024px) {
+
+    .Moments {
+        position: relative;
+        top: 110px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 0;
+        margin-bottom: 300px;
+        background-color: rgb(255, 255, 255);
+
+        .allUser_postfeed {
+            margin: 1rem;
+            border: 1px solid gray;
+            border-radius: 10px;
+            width: 25%;
+            background-color: white;
+
+            .postfeed_header {
+                padding: 0.5rem;
+                width: 100%;
+                display: flex;
+                align-items: center;
+
+                .avatar {
+                    border: 1px solid gray;
+                    border-radius: 50%;
+                    background-color: white;
+                    width: 9%;
+                }
+
+                .username {
+                    font-size: 1rem;
+                    margin-left: 1rem;
+                }
+            }
+
+            .postfeed_content_subheader {
+                width: 100%;
+                padding: 0.5rem;
+                font-size: 0.8rem;
+
+                .date {
+                    margin: 0.2rem;
+                    font-size: 1rem;
+                    font-weight: 800;
+                }
+
+                .title {
+                    margin: 0.2rem;
+                    font-size: 0.8rem;
+                    font-weight: 500;
+
+                }
+
+            }
+
+            .postfeed_content_imgtext {
+                overflow: hidden;
+                margin: 5px;
+                border-radius: 5px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .allUserPost_image {
+                    align-self: center;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: 0px 100%;
+                    border-radius: 5px;
+                    margin: 10px;
+                }
+
+                .allUserPost_text {
+                    padding: 1rem;
+                }
+
+                .allUserPost_webUrl{
+                   margin:0.5rem 0.5rem;
+                    text-decoration: none;
+                    font-size: 0.8rem;
+                    color:#6d66ee;
+                    cursor:pointer;
+                }
+            }
+
+            .postfeed {
+                padding: 5px;
+
+                .postfeed_menu {
+                    padding: 0.2rem;
+
+                    .postfeed_icons {
+                        border: none;
+                        background-color: transparent;
+                        font-size: 1.5rem;
+                        margin-left: 2rem;
+                        color: rgb(66, 66, 66);
+                    }
+                }
+
+                .postfeed_commentSection {
+                    width: 100%;
+
+
+                    .postfeed_content_reply {
+                        border-radius: 10px;
+                        display: flex;
+                        align-content: center;
+                        margin: 0.5rem;
+
+                        .postfeed_content_reply_user {
+
+                            width: 100%;
+                            display: flex;
+                            align-content: center;
+                            justify-content: space-between;
+                            background-color: transparent;
+                            border-radius: 10px;
+
+
+
+
+                            .postfeed_content_userfield {
+                                display: flex;
+                                align-items: center;
+                                font-size: 0.9rem;
+                                margin: 0.2rem;
+                                word-break: break-all;
+
+
+
+                                .postfeed_content_userAvatar {
+                                    width: 7%;
+                                    border-radius: 50%;
+                                    border: 1px solid gray;
+                                    margin-right: 0.3rem;
+                                    margin-left: 0.3rem;
+                                    background-color: white;
+                                }
+
+                            }
+
+
+                            .comment__delete-btn {
+                                width: 30px;
+                                border: none;
+                                background-color: transparent;
+                                border-radius: 50%;
+                                font-size: 1.1rem;
+                                margin: 0.5rem;
+                                color: red;
+                                cursor: pointer;
+
+                            }
+
+                        }
+
+
+                    }
+
+                    .postfeed_content_reply:nth-child(odd) {
+                        background-color: #00ffff70
+                    }
+
+                    .postfeed_content_reply:nth-child(even) {
+                        background-color: #6d66ee54;
+                    }
+
+
+                    .postfeed_comment_input {
+
+                        border-bottom: 3px solid gray;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 0.3rem;
+                        margin: 1rem 0.4rem;
+
+
+
+                        input {
+                            width: 100%;
+                            border: none;
+                            outline: none;
+                            margin-left: 0.5rem;
+                        }
+
+                        .postfeed_comment_input_button {
+                            border: none;
+                            background: white;
+                            font-size: 1rem;
+                            margin: 0.5rem;
+                            cursor: pointer;
+
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+}

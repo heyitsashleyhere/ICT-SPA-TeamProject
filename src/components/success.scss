@@ -1,0 +1,236 @@
+@keyframes trophy {
+	0% {
+		transform: translateY(500px);
+		opacity: 0;
+	}
+	35% {
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes move-up {
+	0% {
+		transform: translateY(10px);
+		opacity: 0;
+	}
+	60% {
+		opacity: 1;
+	}
+	80% {
+		transform: translateY(-20vw);
+	}
+	100% {
+		transform: translateY(-15vw);
+		opacity: 0;
+	}
+}
+
+@keyframes move-down {
+	0% {
+		transform: translateY(-10px);
+		opacity: 0;
+	}
+	60% {
+		opacity: 1;
+	}
+	80% {
+		transform: translateY(20vw);
+	}
+	100% {
+		transform: translateY(15vw);
+		opacity: 0;
+	}
+}
+
+@keyframes move-left {
+	0% {
+		transform: translateX(10px);
+		opacity: 0;
+	}
+	60% {
+		opacity: 1;
+	}
+	80% {
+		transform: translateX(-35vw);
+	}
+	100% {
+		transform: translateX(-180px);
+		opacity: 0;
+	}
+}
+
+@keyframes move-right {
+	0% {
+		transform: translateX(-10px);
+		opacity: 0;
+	}
+	60% {
+		opacity: 1;
+	}
+	80% {
+		transform: translateX(35vw);
+	}
+	100% {
+		transform: translateX(180px);
+		opacity: 0;
+	}
+}
+
+@keyframes move-up-left {
+	0% {
+		transform: rotate(135deg) translate(0vw,0vw);
+		opacity: 0;
+	}
+	60% {
+		opacity: 1;
+	}
+	100% {
+		transform: rotate(135deg) translate(-3vw,20vw);
+		opacity: 0;
+	}
+}
+
+@keyframes move-up-right {
+	0% {
+		transform: rotate(45deg);
+		opacity: 0;
+	}
+	60% {
+		opacity: 1;
+	}
+	100% {
+		transform: rotate(45deg) translate(-3vw,-20vw);
+		opacity: 0;
+	}
+}
+
+@keyframes move-down-left {
+	0% {
+		transform: rotate(45deg) translate(0vw,0vw);
+		opacity: 0;
+	}
+	60% {
+		opacity: 1;
+	}
+	100% {
+		transform: rotate(45deg) translate(-3vw,20vw);
+		opacity: 0;
+	}
+}
+
+@keyframes move-down-right {
+	0% {
+		transform: rotate(135deg) translate(0vw,0vw);
+		opacity: 0;
+	}
+	60% {
+		opacity: 1;
+	}
+	100% {
+		transform: rotate(135deg) translate(0vw,-20vw);
+		opacity: 0;
+	}
+}
+
+.wrapper {
+  // overflow: hidden;
+  width: 830px;
+  height: 600px;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    position: relative;
+    width: 300px;
+    height: 150px;
+  }
+  
+  .trophy {
+    z-index: 1;
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    animation: trophy 0.75s 1 ease-in-out;
+  }
+  
+  .action {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 120px;
+    width: 120px;
+    
+    %line {
+      z-index: -1;
+      position: absolute;
+      height: 25px;
+      width: 8px;
+      border-radius: 10px;
+      animation-fill-mode: forwards;
+      animation-duration: 0.75s;
+      animation-iteration-count: 1;
+      transform-origin: center middle;
+      opacity: 0;
+    }
+    .line {
+      @extend %line;
+      top: 0;
+      left: calc(50% - 5px);
+      background-color: #6C66EE;
+      animation-name: move-up;
+      animation-delay: 0.80s;
+      &.two {
+        top: auto;
+        bottom: 0;
+        animation-name: move-down;
+      }
+      &.three,&.four {
+        top: calc(50% - 5px);
+        left: calc(50% - 25px);
+        height: 8px;
+        width: 25px;
+        animation-name: move-left;
+      }
+      &.four {			
+        animation-name: move-right;
+      }
+      &-aqua {
+        @extend %line;
+        background-color: #5DF8FD;
+        animation-name: move-up-left;
+        transform: rotate(135deg);
+        animation-delay: .83s;
+        left: 20%;
+        top: 20%;
+        &.two {
+          animation-name: move-up-right;
+          left: auto;
+          right: 20%;
+          transform: rotate(45deg);
+        }
+        &.three {
+          top: auto;
+          bottom: 20%;
+          transform: rotate(45deg);
+          animation-name: move-down-left;
+        }
+        &.four {
+          top: auto;
+          bottom: 20%;
+          left: auto;
+          right: 20%;
+          transform: rotate(135deg);
+          animation-name: move-down-right;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "data": {
+    "light": {
+      "id": "T_001",
+      "name": "Light",
+      "nav": "#E5E5E5",
+      "colors": {
+        "body": "#FFFFFF",
+        "text": "#000000",
+        "button": {
+          "text": "#FFFFFF",
+          "background": "#6200EE"
+        },
+        "link": {
+          "text": "#bb86fc",
+          "opacity": 1
+        }
+      },
+      "font": "DM Serif Display"
+    },
+    "dark": {
+      "id": "T_002",
+      "name": "Dark",
+      "nav": "#FFFFFF",
+      "colors": {
+        "body": "#030303",
+        "text": "#FFFFFF",
+        "button": {
+          "text": "#000000",
+          "background": "#6200EE"
+        },
+        "link": {
+          "text": "#bb86fc",
+          "opacity": 1
+        }
+      },
+      "font": "Ubuntu"
+    }
+  }
+}

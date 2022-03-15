@@ -1,0 +1,117 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+footer{
+    width:100%;
+    position:fixed;
+    bottom:0;
+    left:0;
+    height:100px;
+    width:100%;
+    background-color: white;
+    display:flex;
+    justify-content: space-between;
+
+    .logo-logout{
+        width:56%;
+        height:100%;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+       
+    
+        .animated-logo{
+            position:relative;
+            width:180px;
+
+            
+
+            img{
+            width:30px;
+            height:30px;
+            }
+            img:nth-of-type(2){
+            position: relative;
+            top: 13px;
+            left: -7px;
+            }
+            img:nth-of-type(3){
+            position: relative;
+            top: 0;
+            left: -15px;
+            }
+            img:nth-of-type(4){
+            position: relative;
+            top: 13px;
+            left: -23px;
+            }
+            img:nth-of-type(5){
+            position: relative;
+            top: 26px;
+            left: -31px;
+            }
+        }
+
+
+        .logout-button{
+            position:relative;
+            left:100px;
+            width:6rem;
+            padding:10px;
+            border-radius: 10px;
+            border:none;
+            color:white;
+            font-weight: 600;
+            font-size:1rem;
+            background-color:#6C66EE ;
+            transition: font-size 0.1s ease-out;
+            text-align: center;
+            text-decoration: none;
+            
+                &:hover{
+                background-color: white;
+                color:#6C66EE ;
+                font-size:1.1rem;
+                }
+            }
+        .logo{
+            // width:50px;
+            width: 100px;
+            margin-top: 20px;
+
+        }
+
+    }
+    .git_team{
+    
+        width:30%;
+        display:flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .git_icon {
+            font-size: 2rem;
+        }
+        
+        .team_links{
+            font-size: 0.7rem;
+            text-decoration: none;
+            
+            p{
+                margin:0.2rem;
+
+                a{
+                    text-decoration: none;
+                    color:#6C66EE;
+                }
+            }
+        }
+    }
+
+
+
+}

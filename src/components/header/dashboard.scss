@@ -1,0 +1,212 @@
+
+
+.show-dashboard {
+    transform: translate(1);
+  }
+
+
+.dashboard {
+    position: absolute;
+    top: 8.3rem;
+    left: 1rem;
+    width: 250px;
+    height: 715px;
+    background: white;
+    color:black;
+    row-gap: 1rem;
+    transition: all 0.3s linear;
+    transform: translate(0);
+    padding: 0 30px 0 30px;
+    border-radius:10px;
+    border:1px solid gray;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .dashboard_info{
+        margin-top:0.3rem;
+       
+    }
+
+    .dashboard_user_data{
+        width:100%;
+        margin:0.3rem 0rem;
+        padding:0.2rem;
+
+
+        .dashboard_logo{
+            
+            display:flex;
+            flex-direction: column;
+            align-items:right;
+            
+            img{
+                width:120px;
+            }
+
+            h2{
+                font-size: 0.8rem;
+                margin-bottom: 2rem;
+                color:rgb(104, 104, 104);
+            }
+        }
+
+        .dashboard_info{
+            margin-top:0.3rem;
+            font-size: 1rem;
+           
+        }
+
+  
+
+    }
+
+
+    .dashboard_user_settings{
+        text-decoration: none;
+        margin-top:0.3rem;
+        display:flex;
+        flex-direction: column;
+
+        .dashboard_info{
+            position:relative;
+            margin-top:2rem;
+            display:block;
+            text-decoration: none;
+            color:rgb(44,44,44);
+            cursor: pointer;
+
+        }
+
+        .dashboard_one, 
+        .dashboard_two, 
+        .dashboard_three, 
+        .dashboard_four, 
+        .dashboard_five, 
+        .dashboard_six, 
+        .dashboard_seven{
+            text-decoration: none;
+            color:rgb(44,44,44);
+            display:inline-block;
+            position:relative;
+            margin-top:1.5rem;
+            cursor:pointer;
+        }
+       
+        .dashboard_one:after{
+            content:'';
+            position:absolute;
+            top:1.5rem;
+            width:50%;
+            transform:scaleX(0);
+            height:3px;
+            bottom:0;
+            left:0;
+            background-color: rgb(44, 44, 44);
+            transform-origin:bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .dashboard_two:after{
+            content:'';
+            position:absolute;
+            top:1.5rem;
+            width:48%;
+            transform:scaleX(0);
+            height:3px;
+            bottom:0;
+            left:0;
+            background-color: rgb(44, 44, 44);
+            transform-origin:bottom right;
+            transition: transform 0.25s ease-out;
+        }
+        .dashboard_three:after{
+            content:'';
+            position:absolute;
+            top:1.5rem;
+            width:23%;
+            transform:scaleX(0);
+            height:3px;
+            bottom:0;
+            left:0;
+            background-color: rgb(44, 44, 44);
+            transform-origin:bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .dashboard_four:after{
+            content:'';
+            position:absolute;
+            top:1.5rem;
+            width:30%;
+            transform:scaleX(0);
+            height:3px;
+            bottom:0;
+            left:0;
+            background-color: rgb(44, 44, 44);
+            transform-origin:bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .dashboard_five:after{
+            content:'';
+            position:absolute;
+            top:1.5rem;
+            width:30%;
+            transform:scaleX(0);
+            height:3px;
+            bottom:0;
+            left:0;
+            background-color: rgb(44, 44, 44);
+            transform-origin:bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .dashboard_six:after{
+            content:'';
+            position:absolute;
+            top:1.5rem;
+            width:50%;
+            transform:scaleX(0);
+            height:3px;
+            bottom:0;
+            left:0;
+            background-color: rgb(44, 44, 44);
+            transform-origin:bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .dashboard_seven:after{
+            content:'';
+            position:absolute;
+            top:1.5rem;
+            width:15%;
+            transform:scaleX(0);
+            height:3px;
+            bottom:0;
+            left:0;
+            background-color: rgb(44, 44, 44);
+            transform-origin:bottom right;
+            transition: transform 0.25s ease-out;
+        }
+         
+
+        .dashboard_one:hover:after, 
+        .dashboard_two:hover:after,
+        .dashboard_three:hover:after,
+        .dashboard_four:hover:after,
+        .dashboard_five:hover:after,
+        .dashboard_six:hover:after,
+        .dashboard_seven:hover:after{
+            transform:scaleX(1);
+            transform-origin: bottom left;
+
+        }
+
+    
+    }
+  }
+ 
+
+  

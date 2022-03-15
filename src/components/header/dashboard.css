@@ -1,0 +1,35 @@
+/* *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+
+
+.dashboard {
+  position: absolute;
+  top: 5rem;
+  left: 1.5rem;
+  width: 250px;
+  height: 500px;
+  background: white;
+  color:black;
+  row-gap: 1rem;
+  transition: all 0.3s linear;
+  transform: translate(250px);
+  padding: 0 30px 0 30px;
+  border-radius:10px;
+  border:1px solid gray;
+
+  .dashboard_user_data{
+  }
+
+
+}
+.show-dashboard {
+  transform: translate(1);
+}
+
+.dashboard_user_data{
+
+} */
