@@ -12,27 +12,26 @@ An app to help users document their ideation
     - Login/Register Components and routing
     - Profile Component
 
-- Murad:
+- [Murad](https://github.com/muradgm)
     - Routing
     - UserDashboard Component
     - UserSetting (password change)
     - Popup for CreatePost component
     - Animations
 
-- Ivo:
+- [Ivo](https://github.com/ivoserra)
     - Posts, Users API
     - Moments Component
     - CreatePost and ConfirmPost components
     - Styling all components (aka inline style exterminator)
     - Figma designer
 
-- Darren:
+- [Darren](https://github.com/Snell401)
     - Beginning phase Global Style Sheets (SCSS)
     - Search Bar component
 
 - Henrik:
     - Animated cube
-    - Loading Component
 
 ### Time Period:
 - 3-4 days
