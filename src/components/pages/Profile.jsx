@@ -133,7 +133,7 @@ const Profile = () => {
 
               <div className="postfeed_content_subheader">
                 <h3 className="date">{post.date}</h3>
-                <h2 className="title">{post.title}</h2>@
+                <h2 className="title">{post.title}</h2>
               </div>
 
               <section className="postfeed_content">

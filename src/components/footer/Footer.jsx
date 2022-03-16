@@ -77,7 +77,7 @@ const Footer = () => {
         <FaGithubAlt className='git_icon' />
         <section className="team_links">
           <p>Ashley Jiang : <a href="https://github.com/heyitsashleyhere" target="_blank" rel="noreferrer">heyitsashleyhere</a></p>
-          <p>Darren Snell : <a href="https://github.com/heyitsashleyhere" target="_blank" rel="noreferrer">Snell401</a></p>
+          <p>Darren Snell : <a href="https://github.com/Snell401" target="_blank" rel="noreferrer">Snell401</a></p>
           <p>Henrik / artoo : <a href="https://github.com/chewbacca23" target="_blank" rel="noreferrer">chewbacca23</a></p>
           <p>Ivo Serra : <a href="https://github.com/ivoserra" target="_blank" rel="noreferrer">ivoserra</a></p>
           <p>Murad Muqbel : <a href="https://github.com/muradgm" target="_blank" rel="noreferrer">muradgm</a></p>

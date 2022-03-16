@@ -17,28 +17,26 @@ import hexImages from "../../hex/hexagon";
 
 
 //ANIMATIONS
-const pageTransition = {
-  type: "tween",
-  ease: "anticipate",
-  duration: .75
-};
-
-//Hexagon Animation
-const pageVariants = {
-  initial: {
+const formVariants = {
+  hidden: {
     opacity: 0,
     x: "50vw",
   },
   in: {
     opacity: 1,
     x: 0,
+    transition: {
+      type: "tween",
+      ease: "anticipate",
+      duration: .75
+    }
   },
   out: {
     opacity: 0,
     x: "50vw",
   }
 };
-
+//Hexagon 
 const container = {
   show: {
     transition: {
@@ -56,7 +54,7 @@ const item = {
     y: 0,
     transition: {
       ease: [.6, .01, -0.5, .95],
-      duration: 1.6
+      duration: 1
     }
   },
   exit: {
@@ -69,84 +67,6 @@ const item = {
     }
   }
 }
-
-//Slogan Animation
-const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
-
-const ideas = {
-  initial: {
-    y: 0,
-  },
-  animate: {
-    y: 0,
-    transition: {
-      delayChildren: 0.6,
-      staggerChildren: 0.04,
-      staggerDirection: -1,
-    },
-  },
-  exit: {
-    opacity: 0,
-    y: 400,
-    transition: {
-      duration: 1,
-    }
-  }
-};
-
-const come = {
-  initial: {
-    y: 0,
-  },
-  animate: {
-    y: 0,
-    transition: {
-      delayChildren: 0.6,
-      staggerChildren: 0.04,
-      staggerDirection: 1,
-    },
-  },
-  exit: {
-    opacity: 0,
-    y: 400,
-    transition: {
-      duration: 1,
-    }
-  }
-};
-
-const together = {
-  initial: {
-    y: 0,
-  },
-  animate: {
-    y: 0,
-    transition: {
-      delayChildren: 0.6,
-      staggerChildren: 0.04,
-      staggerDirection: 1,
-    },
-  },
-  exit: {
-    opacity: 0,
-    y: 400,
-    transition: {
-      duration: 1,
-    }
-  }
-};
-
-
-const letter = {
-  initial: {
-    y: 400,
-  },
-  animate: {
-    y: 0,
-    transition: { duration: 1, ...transition },
-  },
-};
-
 
 
 export default function Login() {
@@ -172,12 +92,12 @@ export default function Login() {
   useEffect(() => {
     setValidName(USER_REGEX.test(userName));
     setUnfoundUser(false)
-  }, [userName])
+  }, [userName, validName])
   // CHECK PASSWORD =========================
   useEffect(() => {
     setValidPwd(PWD_REGEX.test(pwd));
     setInvalidPwd(false)
-  }, [pwd])
+  }, [pwd, invalidPwd])
   // ON SUBMIT ==============================
   function handleSubmit(e) {
     e.preventDefault()
@@ -208,63 +128,55 @@ export default function Login() {
 
   return (
     <motion.section className="Login"
-      initial='hidden'
-      animate='show'
-      exit='exit'
-    >
-      <motion.section className='logo'>
+                    initial='hidden'
+                    animate='show'
+                    exit='exit'>
 
-        <motion.section className="hex-container"
-          variants={container}
-        >
+      <motion.section className='logo'>
+        <motion.section className="hex-container" variants={container}>
           {hexImages.map((image, i) =>
             <motion.img key={`loginHexImages-${i}`} variants={item} className={image.title} src={image.src} alt={image.title} />
           )}
         </motion.section>
 
-        <motion.div className="slogan-container"
-          initial='initial'
-          animate='animate'
-          exit='exit'
-        >
-          <motion.span className="ideas" variants={ideas}>
-            <motion.span variants={letter}>I</motion.span>
-            <motion.span variants={letter}>d</motion.span>
-            <motion.span variants={letter}>e</motion.span>
-            <motion.span variants={letter}>a</motion.span>
-            <motion.span variants={letter}>s</motion.span>
+        <motion.div className="slogan-container">
+            <motion.span className="ideas"variants={container}>
+              <motion.span variants={item}>I</motion.span>
+              <motion.span variants={item}>d</motion.span>
+              <motion.span variants={item}>e</motion.span>
+              <motion.span variants={item}>a</motion.span>
+              <motion.span variants={item}>s</motion.span>
+            </motion.span>
+
+          <motion.span className="come" variants={container}>
+            <motion.span variants={item}>C</motion.span>
+            <motion.span variants={item}>o</motion.span>
+            <motion.span variants={item}>m</motion.span>
+            <motion.span variants={item}>e</motion.span>
           </motion.span>
 
-          <motion.span className="come" variants={come}>
-            <motion.span variants={letter}>C</motion.span>
-            <motion.span variants={letter}>o</motion.span>
-            <motion.span variants={letter}>m</motion.span>
-            <motion.span variants={letter}>e</motion.span>
-          </motion.span>
-
-          <motion.span className="together" variants={together}>
-            <motion.span variants={letter}>T</motion.span>
-            <motion.span variants={letter}>o</motion.span>
-            <motion.span variants={letter}>g</motion.span>
-            <motion.span variants={letter}>e</motion.span>
-            <motion.span variants={letter}>t</motion.span>
-            <motion.span variants={letter}>h</motion.span>
-            <motion.span variants={letter}>e</motion.span>
-            <motion.span variants={letter}>r</motion.span>
+          <motion.span className="together" variants={container}>
+            <motion.span variants={item}>T</motion.span>
+            <motion.span variants={item}>o</motion.span>
+            <motion.span variants={item}>g</motion.span>
+            <motion.span variants={item}>e</motion.span>
+            <motion.span variants={item}>t</motion.span>
+            <motion.span variants={item}>h</motion.span>
+            <motion.span variants={item}>e</motion.span>
+            <motion.span variants={item}>r</motion.span>
           </motion.span>
         </motion.div>
-
       </motion.section>
 
       {login
         ? <Navigate to={`/${userName}/moments`} />
         :
         <motion.section
-          initial="initial"
-          animate="in"
-          exit="out"
-          variants={pageVariants}
-          transition={pageTransition} className="Login-form">
+          // initial="hidden"
+          // animate="in"
+          // exit="out"
+          // variants={formVariants}
+          className="Login-form">
           <h1 className="login-header">Login</h1>
           <section className="outerLogin">
             <form onSubmit={handleSubmit} className="login-register-form">
