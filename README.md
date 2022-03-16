@@ -11,6 +11,7 @@ An app to help users document their ideation
     - Set localStorage
     - Login/Register Components and routing
     - Profile Component
+    - Routing
 
 - [Murad](https://github.com/muradgm)
     - Routing
