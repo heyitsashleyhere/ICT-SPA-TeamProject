@@ -1,7 +1,8 @@
 # ICT (Ideas Come Together) - SPA Team Project
 An app to help users document their ideation
 
-## It's not responsive at the moment, please view in full screen:
+## It's not responsive at the moment, please view in full screen
+#NOTE: if you encounter a page that will not load fully please refresh the page as we are currently fixing a 🪳 from our animations
 
 
 ### Members:
