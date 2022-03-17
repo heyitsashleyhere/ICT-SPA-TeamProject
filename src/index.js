@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 // App Component:
 import App from './components/App'
 // Router Component:
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 // Contexts:
 import UserContextProvider from './components/context/UserContext';
 import LoginRegisterContextProvider from './components/context/LoginRegisterContext'
@@ -27,7 +27,7 @@ const ProjectIndex = () => {
 
 
 ReactDOM.render(
-<BrowserRouter>
+<HashRouter>
  <UserContextProvider>
   <PostContextProvider>
     <LoginRegisterContextProvider>
@@ -39,7 +39,7 @@ ReactDOM.render(
     </LoginRegisterContextProvider>
    </PostContextProvider>
   </UserContextProvider>
-</BrowserRouter>
+</HashRouter>
   , document.getElementById('root')
 );
 

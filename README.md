@@ -6,18 +6,17 @@
 
 ### Time Period:
 - 3-4 days
-- Due: 15.03.2022 ---> ***Presented but project is ongoing***
+- Due: 15.03.2022
 
 ## NOTE: 
-- You might encounter a page that will not load fully, if so please refresh the page as we are using FramerMotion which is a bit 🪳 from our animations.
-- It's not responsive at the moment, please view in full screen
+- It's not responsive, please view in full screen (NO BOOTSTRAP)
 
-## What we currenlty achieved:
+## What we currently achieved:
 - Social (users can interact: commenting)
 - Upload images, text and other mediums
 - Private/Public post options 
 
-## Plan for the future:
+## Plans for the future?
 - Drag/drop posts
 - Brainstorming/mood boards
 - Chat area and see which users are online

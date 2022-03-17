@@ -62,8 +62,8 @@ const item = {
     y: -200,
     transition: {
       ease: [.6, .01, -0.5, .95],
-      duration: 1,
-      delay: 0.3
+      duration: 0.5,
+      // delay: 0.3
     }
   }
 }
@@ -127,55 +127,55 @@ export default function Login() {
   }
 
   return (
-    <motion.section className="Login"
+    <section className="Login"
                     initial='hidden'
                     animate='show'
                     exit='exit'>
 
-      <motion.section className='logo'>
-        <motion.section className="hex-container" variants={container}>
+      <section className='logo'>
+        <section className="hex-container" variants={container}>
           {hexImages.map((image, i) =>
-            <motion.img key={`loginHexImages-${i}`} variants={item} className={image.title} src={image.src} alt={image.title} />
+            <img key={`loginHexImages-${i}`} variants={item} className={image.title} src={image.src} alt={image.title} />
           )}
-        </motion.section>
+        </section>
 
-        <motion.div className="slogan-container">
-            <motion.span className="ideas"variants={container}>
-              <motion.span variants={item}>I</motion.span>
-              <motion.span variants={item}>d</motion.span>
-              <motion.span variants={item}>e</motion.span>
-              <motion.span variants={item}>a</motion.span>
-              <motion.span variants={item}>s</motion.span>
-            </motion.span>
+        <div className="slogan-container">
+            <span className="ideas"variants={container}>
+              <span variants={item}>I</span>
+              <span variants={item}>d</span>
+              <span variants={item}>e</span>
+              <span variants={item}>a</span>
+              <span variants={item}>s</span>
+            </span>
 
-          <motion.span className="come" variants={container}>
-            <motion.span variants={item}>C</motion.span>
-            <motion.span variants={item}>o</motion.span>
-            <motion.span variants={item}>m</motion.span>
-            <motion.span variants={item}>e</motion.span>
-          </motion.span>
+          <span className="come" variants={container}>
+            <span variants={item}>C</span>
+            <span variants={item}>o</span>
+            <span variants={item}>m</span>
+            <span variants={item}>e</span>
+          </span>
 
-          <motion.span className="together" variants={container}>
-            <motion.span variants={item}>T</motion.span>
-            <motion.span variants={item}>o</motion.span>
-            <motion.span variants={item}>g</motion.span>
-            <motion.span variants={item}>e</motion.span>
-            <motion.span variants={item}>t</motion.span>
-            <motion.span variants={item}>h</motion.span>
-            <motion.span variants={item}>e</motion.span>
-            <motion.span variants={item}>r</motion.span>
-          </motion.span>
-        </motion.div>
-      </motion.section>
+          <span className="together" variants={container}>
+            <span variants={item}>T</span>
+            <span variants={item}>o</span>
+            <span variants={item}>g</span>
+            <span variants={item}>e</span>
+            <span variants={item}>t</span>
+            <span variants={item}>h</span>
+            <span variants={item}>e</span>
+            <span variants={item}>r</span>
+          </span>
+        </div>
+      </section>
 
       {login
         ? <Navigate to={`/${userName}/moments`} />
         :
-        <motion.section
-          initial="hidden"
-          animate="in"
-          exit="out"
-          variants={formVariants}
+        <section
+          // initial="hidden"
+          // animate="in"
+          // exit="out"
+          // variants={formVariants}
           className="Login-form">
           <h1 className="login-header">Login</h1>
           <section className="outerLogin">
@@ -252,10 +252,10 @@ export default function Login() {
             </section>
 
           </section>
-        </motion.section>
+        </section>
       }
 
-    </motion.section>
+    </section>
 
   )
 }
