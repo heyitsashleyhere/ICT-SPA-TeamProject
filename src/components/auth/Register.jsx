@@ -5,15 +5,13 @@ import { NavLink, Navigate } from 'react-router-dom';
 // Contexts:
 import { LoginRegisterContext } from "../context/LoginRegisterContext";
 import { UserContext } from "../context/UserContext";
-// Components:
-import Loader from "../Loader";
 // Styling:
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 import { TiTick, TiTimes } from "react-icons/ti";
 import { HiOutlineLightBulb } from "react-icons/hi";
 import './Register.scss'
 import { motion } from "framer-motion";
-import hexImages from "../../hex/hexagon";
+import hexImages from "../../theme/hex/hexagon";
 
 //ANIMATIONS
 // page == form

@@ -13,7 +13,7 @@ import { TiTick, TiTimes } from "react-icons/ti";
 import { HiOutlineLightBulb } from "react-icons/hi";
 import './Login.scss'
 import { motion } from "framer-motion";
-import hexImages from "../../hex/hexagon";
+import hexImages from "../../theme/hex/hexagon";
 
 
 //ANIMATIONS

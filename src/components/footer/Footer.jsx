@@ -6,7 +6,7 @@ import { UserContext } from '../context/UserContext'
 import { FaGithubAlt } from 'react-icons/fa'
 
 import './footer.scss'
-import hexImages from '../../hex/hexagon'
+import hexImages from '../../theme/hex/hexagon'
 import { motion } from 'framer-motion'
 
 
