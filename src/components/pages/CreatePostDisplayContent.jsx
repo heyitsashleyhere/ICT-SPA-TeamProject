@@ -9,7 +9,6 @@ import { UserContext } from "../context/UserContext.jsx";
 // Styling
 import { CgImage } from "react-icons/cg";
 import { BsFillCheckCircleFill } from "react-icons/bs";
-import Success from "../Success";
 import { motion } from "framer-motion";
 
 import "./createpost.scss";
@@ -97,7 +96,6 @@ const CreatePostInput = () => {
             animate="show"
           >
             <BsFillCheckCircleFill className="postInput_confirmIcon" />
-            {/* <Success /> */}
             <motion.h2 variants={success}>We got this</motion.h2>
           </motion.section>
 

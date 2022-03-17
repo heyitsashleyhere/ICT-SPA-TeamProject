@@ -5,42 +5,37 @@ import { NavLink, Navigate } from 'react-router-dom';
 // Contexts:
 import { LoginRegisterContext } from "../context/LoginRegisterContext";
 import { UserContext } from "../context/UserContext";
-// Components:
-import Loader from "../Loader";
 // Styling:
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 import { TiTick, TiTimes } from "react-icons/ti";
 import { HiOutlineLightBulb } from "react-icons/hi";
 import './Register.scss'
 import { motion } from "framer-motion";
-import hexImages from "../../hex/hexagon";
+import hexImages from "../../theme/hex/hexagon";
 
 //ANIMATIONS
-const pageTransition = {
+// page == form
+const pageTransition = { 
   type: "tween",
   ease: "anticipate",
   duration: .75
 };
-
-//Hexagon Animation
 const pageVariants = {
   initial: {
     opacity: 0,
     x: "50vw",
-    scale: 1
   },
   in: {
     opacity: 1,
     x: 0,
-    scale: 1
   },
   out: {
     opacity: 0,
     x: "50vw",
-    scale: 1,
   }
-};
+}
 
+//Hexagon container to allow the children to start their animation apart
 const container = {
   show: {
     transition: {
@@ -48,6 +43,7 @@ const container = {
     }
   }
 }
+//item = hexagons
 const item = {
   hidden: {
     opacity: 0,
@@ -67,7 +63,7 @@ const item = {
     transition: {
       ease: [.6, .01, -0.5, .95],
       duration: 1,
-      delay: .3
+      delay: 0.3
     }
   }
 }
@@ -84,14 +80,14 @@ const ideas = {
     transition: {
       delayChildren: 0.6,
       staggerChildren: 0.04,
-      staggerDirection: -1,
+      staggerDirection: -1, //it's coming from left to right
     },
   },
   exit: {
     opacity: 0,
     y: 400,
     transition: {
-      duration: 1,
+      duration: 1
     }
   }
 };
@@ -185,13 +181,13 @@ export default function Register() {
       setUserExist(false)
     }
     setValidName(USER_REGEX.test(userName));
-  }, [userName])
+  }, [userName, validName, userExist])
   // CHECK PASSWORD =========================
   useEffect(() => {
     setValidPwd(PWD_REGEX.test(pwd));
     const match = pwd === matchPwd; //Boolean
     setValidMatch(match);
-  }, [pwd, matchPwd])
+  }, [pwd, matchPwd, validPwd])
   // CHECK EMAIL ============================
   const allUsersEmail = users.map(user => user.email)
   useEffect(() => {
@@ -207,8 +203,8 @@ export default function Register() {
     e.preventDefault()
     setUsers([...users, { userid: users.length + 1, username: userName, avatar: `https://robohash.org/${userName}`, password: pwd }]);
     setSuccess(true)
-    setLoading(true)
-    setTimeout(() => { setLoading(false) }, 2000)
+    // setLoading(true)
+    // setTimeout(() => { setLoading(false) }, 2000)
   }
 
   useEffect(() => {
@@ -300,9 +296,10 @@ export default function Register() {
       </motion.section>
 
       {success
-        ? (loading
-          ? <Loader />
-          : <Navigate to="/login" />)
+        ? 
+        // (loading ? <Loader /> :
+          window.location.replace('/login') 
+          // <Navigate to="/login" />
         :
         <motion.section
           initial="initial"
@@ -431,7 +428,7 @@ export default function Register() {
 
             <section className="allready-register">
               <p className="allreadyText">Already registered?</p>
-              <NavLink className="loginNavLink hover-underline-animation" to='/login'> Login</NavLink>
+              <NavLink className="loginNavLink hover-underline-animation" to='/login'>Login</NavLink>
             </section>
           </section>
 
