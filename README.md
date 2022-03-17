@@ -9,7 +9,7 @@
 - Due: 15.03.2022 ---> ***Presented but project is ongoing***
 
 ## NOTE: 
-- If you encounter a page that will not load fully please refresh the page as we are currently fixing a 🪳 from our animations.
+- You might encounter a page that will not load fully, if so please refresh the page as we are using FramerMotion which is a bit 🪳 from our animations.
 - It's not responsive at the moment, please view in full screen
 
 ## What we currenlty achieved:
