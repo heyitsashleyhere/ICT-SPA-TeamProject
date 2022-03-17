@@ -12,6 +12,8 @@ import { HiOutlineLightBulb } from "react-icons/hi";
 import './Register.scss'
 import { motion } from "framer-motion";
 import hexImages from "../../theme/hex/hexagon";
+// Component
+import Login from './Login.jsx'
 
 //ANIMATIONS
 // page == form
@@ -298,8 +300,9 @@ export default function Register() {
       {success
         ? 
         // (loading ? <Loader /> :
-          window.location.replace('/login') 
+          // window.location.replace('/login') 
           // <Navigate to="/login" />
+          <Login />
         :
         <motion.section
           initial="initial"
