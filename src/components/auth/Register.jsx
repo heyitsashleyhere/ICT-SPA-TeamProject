@@ -298,7 +298,7 @@ export default function Register() {
       {success
         ? 
         // (loading ? <Loader /> :
-          window.location.replace('ICT-SPA-TeamProject/#/login') 
+          window.location.replace('/login') 
           // <Navigate to="/login" />
         :
         <motion.section
