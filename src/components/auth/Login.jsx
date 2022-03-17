@@ -172,10 +172,10 @@ export default function Login() {
         ? <Navigate to={`/${userName}/moments`} />
         :
         <motion.section
-          // initial="hidden"
-          // animate="in"
-          // exit="out"
-          // variants={formVariants}
+          initial="hidden"
+          animate="in"
+          exit="out"
+          variants={formVariants}
           className="Login-form">
           <h1 className="login-header">Login</h1>
           <section className="outerLogin">

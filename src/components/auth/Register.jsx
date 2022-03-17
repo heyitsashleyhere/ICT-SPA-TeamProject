@@ -299,8 +299,9 @@ export default function Register() {
 
       {success
         ? 
-        // (loading ? <Loader /> : 
-          <Navigate to="/login" />
+        // (loading ? <Loader /> :
+          window.location.replace('/login') 
+          // <Navigate to="/login" />
         :
         <motion.section
           initial="initial"
