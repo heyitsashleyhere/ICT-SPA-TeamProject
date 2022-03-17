@@ -33,7 +33,7 @@ Just to document/mapping thought process
     - Merge and resolve conflicts and broken codes
     - Cleanup codes
     - Set localStorage
-    - Login/Register Components and routing
+    - Login/Register Components
     - Profile Component
     - Routing
 
