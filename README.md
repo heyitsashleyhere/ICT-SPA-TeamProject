@@ -8,8 +8,7 @@
 - 3-4 days
 - Due: 15.03.2022
 
-## NOTE: 
-- It's not responsive, please view in full screen (NO BOOTSTRAP)
+## NOTE: It's not responsive, please view in full screen (NO BOOTSTRAP)
 
 ## What we currently achieved:
 - Social (users can interact: commenting)
@@ -29,7 +28,7 @@
 Just to document/mapping thought process
 
 ### Members:
-- Ashley: 
+- [Ashley](https://github.com/heyitsashleyhere): 
     - Merge and resolve conflicts and broken codes
     - Cleanup codes
     - Set localStorage
