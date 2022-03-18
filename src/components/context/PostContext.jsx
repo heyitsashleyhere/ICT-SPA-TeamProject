@@ -90,8 +90,13 @@ export default function PostContextProvider(props) {
             return posts
         }
 
-        return posts.filter((post) => {
-            return post.title.includes(query) || post.text.includes(query) || post.username.includes(query)
+        // search is now NOT case sensitive
+        posts.filter((post) => {
+            return (
+                post.title.toLowerCase().includes(query.toLowerCase()) ||
+                post.text.toLowerCase().includes(query.toLowerCase()) ||
+                post.username.toLowerCase().includes(query.toLowerCase())
+              )
         })
     }
 
