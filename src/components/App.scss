@@ -9,3 +9,13 @@
 body{
   font-family:'Roboto';
 }
+
+.App {
+  @media screen and (max-width: 768px) and (min-width: 426px) {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }}

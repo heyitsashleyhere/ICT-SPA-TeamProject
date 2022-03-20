@@ -31,13 +31,13 @@ export default function Profile() {
         <p className="dashboard_info">email: {currentUser.email}</p>
       </section>
       <section className="dashboard_user_settings">
-        <NavLink onClick={handleDashboard} to="settings" className="dashboard_one"><p>user settings</p></NavLink>
-        <p className="dashboard_two">your activity</p>
-        <p className="dashboard_three">saved</p>
-        <p className="dashboard_four">privacy</p>
-        <p className="dashboard_five">security</p>
-        <p className="dashboard_six">notifications</p>
-        <p className="dashboard_seven">help</p>
+        <NavLink onClick={handleDashboard} to="settings" className="dashboard_one dashboardSettings"><p>user settings</p></NavLink>
+        <p className="dashboard_two dashboardSettings">your activity</p>
+        <p className="dashboard_three dashboardSettings">saved</p>
+        <p className="dashboard_four dashboardSettings">privacy</p>
+        <p className="dashboard_five dashboardSettings">security</p>
+        <p className="dashboard_six dashboardSettings">notifications</p>
+        <p className="dashboard_seven dashboardSettings">help</p>
       </section>
 
 
