@@ -6,12 +6,19 @@ import './search.scss'
 const SearchBar = () => {
     const [ isCapsOn, setIsCapsOn ] = useState(false);
     const { searchQuery, setSearchQuery } = useContext(PostContext);
+    
 
     // function searchInputOnKeyUp(e) {
     //     var x = e.getModifierState("CapsLock");
     //     // console.log(x)
     //     setIsCapsOn(!isCapsOn)
     // }
+
+    function searchInputOnChange(e) {
+        setSearchQuery(e.target.value)
+    }
+  
+   
     
   return (
       <div className="search-bar">
@@ -20,7 +27,10 @@ const SearchBar = () => {
                className="nav-searchInput"
                placeholder='search'             
                value={searchQuery}
-               onInput={(e) => setSearchQuery(e.target.value)}
+                onChange={searchInputOnChange}
+              
+
+                
          />
         {/* {isCapsOn ? <p>Caption Lock is On</p> : null} */}
       </div>
