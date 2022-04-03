@@ -1,212 +1,284 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Gothic&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&family=League+Gothic&display=swap");
 
-// @mixin login-body {
-//   margin: 0;
-//   padding: 0;
-//   background-color: #f6f6f6;
-//   box-sizing: border-box;
+@mixin generic-body {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+  box-sizing: border-box;
+}
 
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   background-position: -150px;
-//   background-attachment: fixed;
-//   @include general-font;
-//   // media queries 320 x 765
-//   @media only screen and (max-width: 450px) {
-//     // make background appear at this size
-//     background-image: none;
-//   }
+// ******** Login and register landing page ********
 
-//   @media screen and (max-width: 780px) and (min-width: 450px) {
-//     background-image: none;
-//   }
+@mixin login-register-landing-page {
+  .Login,
+  .Register {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    // height:950px;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    // z-index: -1;
 
-//   @media screen and (min-width: 1150px) {
-//     background-position: -50px;
-//   }
-// }
+    .hex-container {
+      display: flex;
+      position: relative;
+      top: -40vh;
+      left: -10em;
+      transform: translateY(-70%);
+      img {
+        width: 11em;
+        margin-left: -38px;
+      }
+      img:nth-of-type(2) {
+        position: relative;
+        top: 70px;
+        left: -20px;
+      }
+      img:nth-of-type(3) {
+        position: relative;
+        left: -40px;
+      }
+      img:nth-of-type(4) {
+        position: relative;
+        top: 70px;
+        left: -60px;
+      }
+      img:nth-of-type(5) {
+        position: relative;
+        top: 140px;
+        left: -80px;
+      }
+    }
 
-// .root {
-//   height: fit-content;
-// }
+    .slogan-container {
+      position: relative;
+      overflow: hidden;
+      bottom: 50px;
+      right: 250px;
+      color: rgb(73, 71, 71);
+      font-weight: bold;
 
-// @mixin login-app {
-//   height: fit-content;
-// }
+      span {
+        display: inline-block;
+        font-size: 50px;
+        // position: relative;
+        margin-left: 3px;
+      }
 
-// @mixin logo-img {
-//   // center the image on the left hand side
-//   position: absolute;
-//   top: 10vw;
-//   width: 40%;
-//   // media queries 320 x 765
-//   @media only screen and (max-width: 450px) {
-//     // resize logo to 100 x 100
-//     width: 100px;
-//     height: 100px;
-//     //center the image in the middle at the top of the screen
-//     top: 10vw;
-//     // move the image to the left
-//     left: 50%;
-//     transform: translateX(-50%);
-//   }
-//   // media queries 450 x 780
-//   @media screen and (max-width: 780px) and (min-width: 450px) {
-//     height: 100px;
-//     width: 100px;
-//     position: relative;
-//     left: 50%;
-//     transform: translateX(-50%);
-//     z-index: 1;
-//   }
-//   @media screen and (min-width: 1150px) {
-//     position: relative;
-//     left: 0%;
-//   }
-// }
+      .ideas {
+        margin-left: 20px;
+      }
+      .come {
+        margin-left: 20px;
+      }
+      .together {
+        margin-left: 20px;
+      }
 
-// @mixin general-font {
-//   font-family: "BhuTuka Expanded One", cursive;
-//   font-weight: bold;
-// }
+      @media screen and (max-width: 1023px) {
+        //  *********** responsive ***********
+      }
+    }
 
-// @mixin login-h2 {
-//   width: auto;
-//   height: 2rem;
-//   font-size: 2.5rem;
-//   font-weight: bold;
-//   color: #000;
-//   margin: 1rem;
+    .logo {
+      width: 55%;
+      height: 85%;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-end;
 
-//   @media only screen and (max-width: 450px) {
-//     font-size: 1.5rem;
-//     margin: 0.5rem;
-//   }
+      .logo-header {
+        margin: 1rem;
+        font-size: 2rem;
+        letter-spacing: 1.3rem;
+        color: rgb(107, 106, 106);
+      }
 
-//   @media only screen and (min-width: 450px) and (max-width: 780px) {
-//     font-size: 1.5rem;
-//     font-weight: bold;
-//     color: rgb(0, 0, 0);
-//     margin-bottom: 1rem;
-//   }
-// }
+      .logo-image {
+        width: 150px;
+        position: relative;
+        right: 5rem;
+      }
+      @media screen and (max-width: 1023px) {
+        // *************************************rethink needed to become responsive
+      }
+    }
 
-// @mixin login-form {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   width: 100%;
-// }
+    .Login-form {
+      width: 50%;
+      height: 100%;
+      margin: 1rem;
 
-// @mixin login-label {
-//   font-size: 1.5rem;
-//   font-weight: bold;
-//   color: #000;
-//   margin: 0.5rem;
+      .login-header {
+        position: relative;
+        top: 3.5rem;
+        font-size: 2.5rem;
+        font-family: "Ubuntu";
+        color: rgb(73, 71, 71);
+      }
 
-//   @media only screen and (max-width: 450px) {
-//     font-size: 1rem;
-//     margin: 0.25rem;
-//   }
-  
-//   @media only screen and (min-width: 450px) and (max-width: 780px) {
-//     font-size: 1rem;
-//     font-weight: bold;
-//     color: rgb(0, 0, 0);
-//     margin-bottom: 1rem;
-//   }
-// }
+      .log-input {
+        padding: 0.5rem;
+        border-radius: 10px;
+        border: none;
+        width: 100%;
+      }
 
-// @mixin login-input {
-//   width: 40%;
-//   height: 2rem;
-//   border-radius: 0.5rem;
-//   border: 1px solid #000;
-//   padding: 0.5rem;
-//   margin-bottom: 0.3rem;
-//   &:focus + span {
-//     display: block;
-//   }
-//   @media only screen and (max-width: 450px) {
-//     width: 80%;
-//     height: 1.5rem;
-//     border-radius: 0.5rem;
-//     border: 1px solid #000;
-//     padding: 0.5rem;
-//     margin-bottom: 0.3rem;
-//   }
-//   @media only screen and (min-width: 450px) and (max-width: 780px) {
-//     width: 40%;
-//     height: 1.5rem;
-//     border-radius: 0.5rem;
-//     border: 1px solid #000;
-//     padding: 0.5rem;
-//   }
-// }
+      .log-input:focus {
+        outline: none;
+      }
 
-// @mixin general-button {
-//   font-family: "BhuTuka Expanded One", cursive;
-//   font-weight: bold;
-//   width: 20%;
-//   height: 2rem;
-//   border-radius: 0.5rem;
-//   border: 1px solid #000;
-//   padding: 0.5rem;
-//   margin-bottom: 0.2rem;
-//   font-size: 0.8rem;
-//   font-weight: bold;
-//   background-color: #0057b7;
-//   color: #ffd700;
+      .outerLogin {
+        position: relative;
+        width: 95%;
+        height: 90%;
+        margin: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
 
-//   cursor: pointer;
+        .button-login {
+          position: relative;
+          top: 100px;
+          width: 10rem;
+          height: 2.5rem;
+          border-radius: 10px;
+          border: none;
+          color: white;
+          font-weight: 600;
+          font-size: 1rem;
+          background-color: #6c66ee;
+          transition: font-size 0.1s ease-out;
+          cursor: pointer;
 
-//   &:hover {
-//     color: #0057b7;
-//     background-color: #ffd700;
-//   }
-//   @media only screen and (max-width: 450px) {
-//     width: 30%;
-//   }
-//   @media only screen and (min-width: 450px) and (max-width: 780px) {
-//     width: 20%;
-//   }
-// }
+          &:hover {
+            background-color: white;
+            color: #6c66ee;
+            font-size: 1.2rem;
+          }
 
-// @mixin login-p {
-//   font-size: 0.8em;
-//   font-weight: bold;
-//   color: rgb(141, 19, 19);
-//   margin: 0.5rem;
-//   height: 1rem;
-// }
+          &:disabled {
+            font-size: 1rem;
+            background-color: gray;
+            color: white;
+          }
+        }
 
-// @mixin login-a {
-//   text-decoration: none;
+        form,
+        .login-register-form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 40%;
+          height: 50%;
+          justify-content: space-evenly;
+        }
 
-//   color: #0057b7;
+        .innerLogin {
+          margin: 0.2rem;
+          height: 8rem;
+          width: 100%;
 
-//   @media only screen and (max-width: 450px) {
-//     //  change it to look like a button
-//     display: inline-block;
-//     padding: 0.5rem;
-//     border-radius: 0.5rem;
-//     border: 1px solid #000;
-//     font-size: 0.8rem;
-//     font-weight: bold;
-//     background-color: #ffd700;
-//     cursor: pointer;
-//     &:hover {
-//       background-color: #0057b7;
-//       color: #ffd700;
-//     }
-//    hr {
-//     display: none;}
-//   }
-//   hr {
-//     color: #5d9adb94;
-//     // make the line rounded at the edges
-//     border-radius: 0.5rem;
-//   }
-// }
+          .message {
+            margin: 0.5rem;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: rgb(59, 55, 55);
+            font-family: "Ubuntu";
+          }
+        }
+
+        .login-user {
+          display: flex;
+          align-content: center;
+          border: 1px solid rgb(177, 177, 177);
+          border-radius: 10px;
+
+          .icon-login {
+            color: #483fe7;
+            border-radius: 50%;
+            font-size: 1.3rem;
+            margin-top: 0.3rem;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+          }
+
+          .red {
+            color: red;
+          }
+
+          &:focus-within {
+            border: 2px solid #6c66ee;
+          }
+
+          .placeholder {
+            margin: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: rgba(128, 128, 128, 0.699);
+          }
+        }
+
+        .allready-register {
+          display: flex;
+          align-items: center;
+          margin-left: 1rem;
+          height: 3rem;
+
+          .allreadyText {
+            font-size: 1rem;
+          }
+
+          .hover-underline-animation {
+            font-weight: 700;
+            text-decoration: none;
+            margin: 1rem;
+            color: #6c66ee;
+            display: inline-block;
+            position: relative;
+          }
+
+          .hover-underline-animation:after {
+            content: "";
+            position: absolute;
+            top: 1.5rem;
+            width: 100%;
+            transform: scaleX(0);
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background-color: #6c66ee;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+          }
+
+          .hover-underline-animation:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+          }
+        }
+      }
+    }
+  }
+}
+
+//  make the above responsive
+
+@mixin media-laptop {
+  @media screen and (max-width: 1025px) and (min-width: 768px) {
+    //  *********** responsive ***********
+    .logo {
+      width: 50vw;
+      height: 50vw;
+      position: relative;
+      right: -21rem;
+      color: rgb(9, 230, 156);
+    }
+  }
+}

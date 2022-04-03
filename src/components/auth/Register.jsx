@@ -147,7 +147,6 @@ const letter = {
 
 export default function Register() {
   const [success, setSuccess] = useState(false);
-  const [loading, setLoading] = useState(false);
   const [userExist, setUserExist] = useState(false);
   const [emailExist, setEmailExist] = useState(false);
 
@@ -423,7 +422,7 @@ export default function Register() {
                 {matchFocus && !validMatch ? <p className="message redText" id="confirmnote">Must match the first password</p> : null}
               </section>
 
-              <button className="button-login" disabled={!validName || !validPwd || !validMatch ? true : false}>Register</button>
+              <button className="button-login" id="btn-register" disabled={!validName || !validPwd || !validMatch ? true : false}>Register</button>
             </form>
 
             <section className="allready-register">

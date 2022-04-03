@@ -8,8 +8,7 @@
 - 3-4 days
 - Due: 15.03.2022
 
-## NOTE: 
-- It's not responsive, please view in full screen (NO BOOTSTRAP)
+## NOTE: It's not responsive, please view in full screen (NO BOOTSTRAP)
 
 ## What we currently achieved:
 - Social (users can interact: commenting)
@@ -22,14 +21,14 @@
 - Chat area and see which users are online
 - Produce a story (ideation) by setting start/end date
 
-### Refereces we used:
+### References we used:
 - Now : Twitter, Instagram
 - Future: Trello, Jira
 - Differences we will have: Not to be a to-do list or tasks management app
 Just to document/mapping thought process
 
 ### Members:
-- Ashley: 
+- [Ashley](https://github.com/heyitsashleyhere): 
     - Merge and resolve conflicts and broken codes
     - Cleanup codes
     - Set localStorage
@@ -52,11 +51,9 @@ Just to document/mapping thought process
     - Figma designer
 
 - [Darren](https://github.com/Snell401)
-    - Beginning phase Global Style Sheets (SCSS)
+    - Refactor styles into Global Style Sheets (SASS)
     - Search Bar component
 
-- Henrik:
-    - Animated cube
 
 ### Some Modules/Packages/Libraries we used:
 - Animation: `framer-motion": "^6.2.8"`
