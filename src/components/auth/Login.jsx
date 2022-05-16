@@ -91,12 +91,12 @@ export default function Login() {
   // CHECK USERNAME =========================
   useEffect(() => {
     setValidName(USER_REGEX.test(userName));
-    setUnfoundUser(false)
+
   }, [userName, validName])
   // CHECK PASSWORD =========================
   useEffect(() => {
     setValidPwd(PWD_REGEX.test(pwd));
-    setInvalidPwd(false)
+   
   }, [pwd, invalidPwd])
   // ON SUBMIT ==============================
   function handleSubmit(e) {
@@ -120,6 +120,8 @@ export default function Login() {
       setValidName(false)
     }
   }
+
+  console.log('unfoundUser :>> ', unfoundUser);
 
   // PWD SHOW/HIDDEN =========================
   function handleClick() {
@@ -183,8 +185,9 @@ export default function Login() {
               <section className="innerLogin">
                 <section className="login-user">
                   <label htmlFor="username">
-                    {validName && !unfoundUser ? <span><TiTick className="icon-login" /></span> : null}
-                    {validName || !userName || !unfoundUser ? null : <span><TiTimes className="icon-login red" /></span>}
+                    {validName && userName && !unfoundUser ? <span><TiTick className="icon-login" /></span> : null}
+                    {!validName || !userName || unfoundUser ? <span><TiTimes className="icon-login red" /></span> : null}
+
                   </label>
 
                   <input type="text" className="log-input"
@@ -205,7 +208,7 @@ export default function Login() {
                     3 to 24 characters. Must begin with a letter. <br />
                     Letters, numbers, underscores, hyphens are allowed
                   </p> : null}
-                {unfoundUser && !validName ? <p id="invalid-namenote" className="message red"><HiOutlineLightBulb className="icon-login red" />User does not exist</p> : null}
+                {unfoundUser ? <p id="invalid-namenote" className="message red"><HiOutlineLightBulb className="icon-login red" />User does not exist</p> : null}
               </section>
 
 
