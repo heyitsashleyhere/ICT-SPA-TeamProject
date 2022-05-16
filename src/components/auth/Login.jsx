@@ -185,8 +185,8 @@ export default function Login() {
               <section className="innerLogin">
                 <section className="login-user">
                   <label htmlFor="username">
-                    {validName && userName && !unfoundUser ? <span><TiTick className="icon-login" /></span> : null}
-                    {!validName || !userName || unfoundUser ? <span><TiTimes className="icon-login red" /></span> : null}
+                    {validName && userName && !unfoundUser ? <span><TiTick className="icon-login" /></span> : <span><TiTimes className="icon-login red" /></span>}
+                    {/* {!validName || !userName || unfoundUser ? <span><TiTimes className="icon-login red" /></span> : null} */}
 
                   </label>
 
@@ -217,8 +217,8 @@ export default function Login() {
 
                   <label htmlFor="password">
 
-                    {validPwd && !invalidPwd ? <span><TiTick className="icon-login" /></span> : null}
-                    {validPwd || !pwd || !invalidPwd ? null : <span><TiTimes className="icon-login red" /></span>}
+                    {validPwd && !invalidPwd ? <span><TiTick className="icon-login" /></span> : <span><TiTimes className="icon-login red" /></span>}
+                    {/* {!validPwd || !pwd || !invalidPwd ? null : <span><TiTimes className="icon-login red" /></span>} */}
 
                   </label>
                   <input type={show ? "text" : "password"}
