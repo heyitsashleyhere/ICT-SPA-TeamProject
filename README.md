@@ -72,4 +72,4 @@ Just to document/mapping thought process
     - `nanoid": "^3.3.1"`
 - `web-vitals": "^2.1.4"`
 
-//<!-- vercel https://ideas-come-together.vercel.app/ -->
+<!-- vercel https://ideas-come-together.vercel.app/ -->
