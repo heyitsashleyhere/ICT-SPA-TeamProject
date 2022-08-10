@@ -8,6 +8,8 @@
 - 3-4 days
 - Due: 15.03.2022
 
+![ICT](https://user-images.githubusercontent.com/84905549/184006072-bd9c1cca-98bd-4e8e-825a-becba3d7d049.gif)
+
 ## NOTE: It's not responsive, please view in full screen (NO BOOTSTRAP)
 
 ## What we currently achieved:
