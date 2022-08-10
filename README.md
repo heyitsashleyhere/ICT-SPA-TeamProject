@@ -41,7 +41,7 @@ Just to document/mapping thought process
 - [Murad](https://github.com/muradgm)
     - Routing
     - UserDashboard Component
-    - UserSetting (password change)
+    - UserSetting (password change - theme change)
     - Popup for CreatePost component
     - Animations
 
